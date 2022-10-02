@@ -10,6 +10,7 @@ import (
 	"github.com/igorlopushko/ignite.homework/api/model"
 )
 
+// A Direction represents direction type behavior.
 type Direction int
 
 const (
@@ -20,6 +21,7 @@ const (
 	West
 )
 
+// Returns string representation of the direction enum.
 func (d Direction) String() string {
 	switch d {
 	case North:
@@ -34,13 +36,16 @@ func (d Direction) String() string {
 	return "unknown"
 }
 
+// A ILoaderService interface determines the data loader functionality.
 type ILoaderService interface {
 	Load(path string) (map[string]model.City, error)
 }
 
+// A FileLoaderSrv is a representation of the service which performs data load from the file.
 type FileLoaderSrv struct {
 }
 
+// Loads map data from the file.
 func (s FileLoaderSrv) Load(path string) (map[string]*model.City, error) {
 	// ASSUMPTION: file contains only one line per one city.
 	// If there is a duplicate line for the same city the data will be overridden

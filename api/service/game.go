@@ -1,3 +1,4 @@
+// Package service is implemented to represent alien invasion simulation.
 package service
 
 import (
@@ -15,11 +16,13 @@ const (
 	gameOverMsg = "game over"
 )
 
+// A Game represents game object behavior.
 type Game struct {
 	Cities map[string]*model.City
 	Aliens map[int]*model.Alien
 }
 
+// Executes alien invasion simulation process.
 func (g *Game) Run(aliensCount int) error {
 	var err error
 
