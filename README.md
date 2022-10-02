@@ -1,6 +1,6 @@
-# Speed test API tool
+# Alien invasion
 ## Description
-Alien invasion game simulation
+Mad aliens are about to invade the earth and there is a task to simulate the invasion.
 ## Configuration
 Configuration is done through the environment variables. Supported configuration parameters:  
 - ```LOG_LEVEL``` - determines the logs level of the [logrus](https://github.com/sirupsen/logrus) logger. Could have values such as  ```panic```, ```fatal```, ```error```,  ```warn```, ```info```, ```debug```, ```trace```. By default it is set to ```debug```.
