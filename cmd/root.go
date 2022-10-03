@@ -88,7 +88,9 @@ func run(cmd *cobra.Command, _ []string) error {
 
 	// create game object
 	g := &service.Game{
-		Cities: m,
+		Cities:        m,
+		AlienSvc:      service.AlienSvc{MaxStepsCount: config.App.AlienMaxStepsNumber},
+		NavigationSvc: service.NavigationSvc{},
 	}
 
 	// run the game
