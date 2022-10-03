@@ -38,7 +38,7 @@ func (d Direction) String() string {
 
 // A ILoaderService interface determines the data loader functionality.
 type ILoaderService interface {
-	Load(path string) (map[string]model.City, error)
+	Load(path string) (map[string]*model.City, error)
 }
 
 // A FileLoaderSrv is a representation of the service which performs data load from the file.
