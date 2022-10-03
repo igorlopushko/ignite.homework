@@ -43,7 +43,7 @@ func init() {
 	rootCmd.PersistentFlags().IntVarP(
 		&aliensCount,
 		"aliens-count",
-		"ac",
+		"c",
 		0,
 		"Number of aliens to invade the planet X")
 

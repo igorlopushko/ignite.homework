@@ -33,7 +33,6 @@ func (s NavigationSvc) GetRandomDirection(m map[string]*model.City, n string) (s
 }
 
 func getAvailableDirections(m map[string]*model.City, n string) []string {
-	// TODO: update directions????
 	d := make([]string, 0)
 	if _, ok := m[n]; !ok {
 		return d

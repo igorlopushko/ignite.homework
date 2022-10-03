@@ -67,7 +67,7 @@ func (g *Game) step(a *model.Alien) {
 
 	if g.Cities[d].AlienID != -1 {
 		// if the destination city is already occupied delete city and both
-		logrus.Warn(fmt.Printf("%s has been destroyed by %s and %s!", g.Cities[d].Name, a.Name, g.Cities[d].Name))
+		logrus.Warn(fmt.Sprintf("%s has been destroyed by %s and %s!", g.Cities[d].Name, a.Name, g.Aliens[g.Cities[d].AlienID].Name))
 
 		delete(g.Aliens, a.ID)
 		delete(g.Aliens, g.Cities[d].AlienID)
@@ -76,7 +76,6 @@ func (g *Game) step(a *model.Alien) {
 		// acquire new city by alien
 		a.CurrentLocation = g.Cities[d].Name
 
-		// TODO: update directions????
 		g.Cities[d].AlienID = a.ID
 		a.StepsCount++
 	}

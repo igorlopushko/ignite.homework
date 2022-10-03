@@ -44,7 +44,7 @@ func TestGetRandomAlien_AllAliensAreTrappedOrMaxStepsMade_RerunsError(t *testing
 	_, err := svc.GetRandomAlien(aliens)
 
 	if err == nil {
-		t.Errorf("GetRandomAlien() method has to return error")
+		t.Errorf("GetRandomAlien() method has to return an error")
 	}
 }
 
