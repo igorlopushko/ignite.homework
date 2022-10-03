@@ -2,6 +2,7 @@
 package service
 
 import (
+	"bytes"
 	"errors"
 	"fmt"
 
@@ -78,5 +79,36 @@ func (g *Game) step(a *model.Alien) {
 
 		g.Cities[d].AlienID = a.ID
 		a.StepsCount++
+	}
+}
+
+func (g *Game) PrintMap() {
+	var buffer bytes.Buffer
+	if len(g.Cities) > 0 {
+		buffer.WriteString("result map:\n")
+	}
+
+	for _, v := range g.Cities {
+		buffer.WriteString(v.Name)
+		if v.NorthDirection != "" {
+			buffer.WriteString(" north=" + v.NorthDirection)
+		}
+		if v.EastDirection != "" {
+			buffer.WriteString(" east=" + v.EastDirection)
+		}
+		if v.SouthDirection != "" {
+			buffer.WriteString(" south=" + v.SouthDirection)
+		}
+		if v.WestDirection != "" {
+			buffer.WriteString(" west=" + v.WestDirection)
+		}
+
+		buffer.WriteString("\n")
+	}
+
+	if len(g.Cities) > 0 {
+		logrus.Info(buffer.String())
+	} else {
+		logrus.Info("map is empty")
 	}
 }

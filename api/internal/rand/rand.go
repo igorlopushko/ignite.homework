@@ -1,3 +1,4 @@
+// Package rand contains utility methods for the random numbers generation
 package rand
 
 import (

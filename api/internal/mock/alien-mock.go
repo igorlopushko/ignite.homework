@@ -1,3 +1,4 @@
+// Package mock is implemented to represent mock objects for unit-testing.
 package mock
 
 import (
@@ -13,10 +14,12 @@ const (
 	case4 string = "case4"
 )
 
+// A AlienMockSvc represents mock behavior for the alien service
 type AlienMockSvc struct {
 	MockCase string
 }
 
+// Returns values for the mock test cases.
 func (s AlienMockSvc) GenerateAliens(m map[string]*model.City, aliensCount int) (map[int]*model.Alien, error) {
 	switch s.MockCase {
 	case case1:
@@ -37,6 +40,7 @@ func (s AlienMockSvc) GenerateAliens(m map[string]*model.City, aliensCount int) 
 	return nil, errors.New("error in undefined case")
 }
 
+// Returns values for the mock test cases.
 func (s AlienMockSvc) GetRandomAlien(aliens map[int]*model.Alien) (*model.Alien, error) {
 	switch s.MockCase {
 	case case1:

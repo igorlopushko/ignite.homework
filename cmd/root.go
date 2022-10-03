@@ -18,8 +18,8 @@ var fenvfile string
 
 var rootCmd = &cobra.Command{
 	Use:   "go run main.go --aliens-count [number] --env [path]",
-	Short: "Alien invasion game",
-	Long:  "Alien invasion game just to demonstrate golang skills",
+	Short: "Alien invasion simulation",
+	Long:  "Alien invasion simulation just to demonstrate Golang skills",
 	RunE:  run,
 	PersistentPreRunE: func(_ *cobra.Command, _ []string) error {
 		if fenvfile != "" {
@@ -98,6 +98,9 @@ func run(cmd *cobra.Command, _ []string) error {
 	if err != nil {
 		logrus.Error(err)
 	}
+
+	// print the map
+	g.PrintMap()
 
 	return nil
 }

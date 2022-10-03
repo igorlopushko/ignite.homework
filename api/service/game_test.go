@@ -18,7 +18,7 @@ func TestRun_AliensCountGreaterThenCities_ReturnsError(t *testing.T) {
 	err := svc.Run(aliensCount)
 
 	if err == nil {
-		t.Errorf("Run() method has to return error")
+		t.Errorf("Run() method has to return an error")
 	}
 }
 
@@ -39,7 +39,7 @@ func TestRun_AliensSevReturnsErrorOnAlienGeneration_ReturnsError(t *testing.T) {
 	err := svc.Run(aliensCount)
 
 	if err == nil {
-		t.Errorf("Run() method has to return error")
+		t.Errorf("Run() method has to return an error")
 	}
 }
 
@@ -56,7 +56,7 @@ func TestRun_NoCitiesAndAliensLeft_ReturnsError(t *testing.T) {
 	err := svc.Run(aliensCount)
 
 	if err == nil {
-		t.Errorf("Run() method has to return error")
+		t.Errorf("Run() method has to return an error")
 	}
 }
 
@@ -78,6 +78,6 @@ func TestRun_GetRandomAlienReturnsError_ReturnsError(t *testing.T) {
 	err := svc.Run(aliensCount)
 
 	if err == nil {
-		t.Errorf("Run() method has to return error")
+		t.Errorf("Run() method has to return an error")
 	}
 }
