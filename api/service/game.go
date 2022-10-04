@@ -82,6 +82,7 @@ func (g *Game) step(a *model.Alien) {
 	}
 }
 
+// Prints the map in console.
 func (g *Game) PrintMap() {
 	var buffer bytes.Buffer
 	if len(g.Cities) > 0 {

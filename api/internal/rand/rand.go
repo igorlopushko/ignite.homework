@@ -1,4 +1,4 @@
-// Package rand contains utility methods for the random numbers generation
+// Package rand contains utility methods for the random numbers generation.
 package rand
 
 import (
@@ -6,8 +6,9 @@ import (
 	"math/big"
 )
 
-func GetRandomNumber(l int) (int64, error) {
-	r, err := rand.Int(rand.Reader, big.NewInt(int64(l)))
+// Gets a random number in rage of 0 to N.
+func GetRandomNumber(n int) (int64, error) {
+	r, err := rand.Int(rand.Reader, big.NewInt(int64(n)))
 	if err != nil {
 		return 0, err
 	}

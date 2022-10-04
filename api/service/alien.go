@@ -61,7 +61,7 @@ func (s AlienSvc) GetRandomAlien(aliens map[int]*model.Alien) (*model.Alien, err
 		return nil, errors.New(msg)
 	}
 
-	// find random alien
+	// find a random alien
 	for {
 		k, err := random.GetRandomNumber(len(aliens))
 		if err != nil {
@@ -73,7 +73,6 @@ func (s AlienSvc) GetRandomAlien(aliens map[int]*model.Alien) (*model.Alien, err
 				if !a.Trapped && a.StepsCount < s.MaxStepsCount {
 					return a, nil
 				}
-
 				break
 			}
 			k--

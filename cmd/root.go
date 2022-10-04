@@ -1,4 +1,4 @@
-// Package cmd is implemented to represent the command line tool to execute the program logic
+// Package cmd is implemented to represent the command line tool to execute the program logic.
 package cmd
 
 import (

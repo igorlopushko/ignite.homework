@@ -1,7 +1,7 @@
 // Package model is implemented to represent domain models.
 package model
 
-// A City represents the city on the map with all possible directions.
+// A City represents the city on the map with all essential data.
 type City struct {
 	Name           string
 	NorthDirection string
