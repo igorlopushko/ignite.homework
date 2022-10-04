@@ -12,7 +12,7 @@ Direct usage could be done with the following command:
 
 ```go run main.go --aliens-count 2 --env ./config/.env.dev```  
 
-```--aliens-count``` (shot version is ```-ac```) parameter should take number of aliens participated in the simulation.  
+```--aliens-count``` (shot version is ```-c```) parameter should take number of aliens participated in the simulation.  
 ```--env``` (shot version is ```-e```) parameter should take the path to the config file.
 ### Makefile
 Use makefile for a quick run of the program. There are the following rules:

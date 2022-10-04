@@ -1,5 +1,5 @@
 run:
-	@LOG_LEVEL=debug bash -c 'go run main.go --aliens-count 2'
+	@LOG_LEVEL=debug bash -c 'go run main.go --aliens-count 2 --env ./api/config/.env.dev'
 test:
 	@go test -v ./... -coverprofile cover.out
 godoc:

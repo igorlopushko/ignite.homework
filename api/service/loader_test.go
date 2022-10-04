@@ -7,7 +7,7 @@ func TestLoad_WrongFileName_ReturnsError(t *testing.T) {
 	_, err := svc.Load("wrong.txt")
 
 	if err == nil {
-		t.Errorf("Load() method has to return error")
+		t.Errorf("Load() method has to return an error")
 	}
 }
 
@@ -16,7 +16,7 @@ func TestLoad_CorrectFileName_ReturnsMap(t *testing.T) {
 	m, err := svc.Load("../../tests/map_test.txt")
 
 	if err != nil {
-		t.Errorf("Load() method does not have to return error")
+		t.Errorf("Load() method does not have to return an error")
 	}
 
 	if len(m) != 5 {
